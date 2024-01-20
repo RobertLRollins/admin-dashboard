@@ -74,8 +74,11 @@ a:active {
 }
 
 .main {
-    background-image: url("topographic.png");
+    background-image: url(images/topographic.png);
     background-position: center;
     background-color: #7E1DC3;
     grid-row: 2 / 4;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    grid-template-rows: 1fr 5fr;
 }
