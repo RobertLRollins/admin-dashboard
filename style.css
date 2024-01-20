@@ -1,0 +1,79 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 24px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: white;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.header {
+    background-color: #006157;
+    grid-column: 2 / 3;
+}
+
+.sidebar {
+    background-color: #202020;
+    grid-row: 1 / 4;
+    display: grid;
+    grid-template-rows: 2fr repeat(8, 1fr) 2fr;
+    align-items: end;
+}
+
+#logo {
+    height: 155px;
+    place-self: center;
+}
+
+p {
+    margin: 0;
+}
+
+.sidebar-link {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    height: 47px;
+    width: 52px;
+    margin-left: 50px;
+}
+
+#active-missions-icon {
+    color: skyblue;
+}
+
+a:link {
+    color: #CB8B35;
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: #CB8B35;
+}
+
+a:hover {
+    color: skyblue;
+}
+
+a:active {
+    color: skyblue;
+}
+
+.main {
+    background-color: #7E1DC3;
+    grid-row: 2 / 4;
+}
