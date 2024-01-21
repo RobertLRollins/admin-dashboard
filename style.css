@@ -11,13 +11,68 @@ html {
 .container {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 3.5fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
 }
 
 .header {
+    padding-top: 5px;
+    padding-right: 5px;
+    height: 170px;
     background-color: #5B6875;
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#search-icon {
+    place-self: center;
+    height: 36px;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+#search-bar {
+    place-self: center;
+    height: 36px;
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+}
+
+#profile-pic {
+    place-self: center;
+    height: 81px;
+    grid-row: 1 / 2;
+    grid-column: 5 / 7;
+}
+
+#time {
+    place-self: center;
+    height: 60px;
+    grid-row: 1 / 2;
+    grid-column: 7 / 8;
+}
+
+#new-mission {
+    place-self: center;
+    height: 50px;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+}
+
+#call-back {
+    place-self: center;
+    height: 50px;
+    grid-row: 2 / 3;
+    grid-column: 4 / 6;
+}
+
+#log-out {
+    place-self: center;
+    height: 50px;
+    grid-row: 2 / 3;
+    grid-column: 6 / 7;
 }
 
 .sidebar {
@@ -29,7 +84,7 @@ html {
 }
 
 #logo {
-    height: 155px;
+    height: 175px;
     place-self: center;
 }
 
@@ -48,7 +103,7 @@ p {
 .icon {
     height: 47px;
     width: 52px;
-    margin-left: 50px;
+    margin-left: 1vw;
 }
 
 #active-missions-icon {
@@ -81,12 +136,15 @@ a:active {
     grid-template-rows: 1fr 4fr 5fr;
     grid-template-columns: 4fr 1fr;
     padding: 15px;
+
 }
 
-#main-title {
+#active-missions-title {
+    height: 4vh;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     place-self: center;
+    margin: 0;
 }
 
 #card-container {
@@ -99,18 +157,22 @@ a:active {
 
 .card {
     place-self: center;
-    width: 90%;
+    width: clamp(200px, 100%, 300px);
+    height: clamp(250px, 45%, 400px);
 }
 
 #mission-container {
     grid-row: 2 / 4;
     grid-column: 1 / 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    place-items: center;
+    gap: 15px;
 }
 
 .mission {
-    height: 200px;
+    width: clamp(300px, 90%, 450px);
+    height: clamp(100px, 90%, 400px);
     transition-timing-function: ease-out;
     transition-duration: 300ms;
     filter: drop-shadow();
