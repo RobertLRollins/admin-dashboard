@@ -142,7 +142,7 @@ a:hover {
 }
 
 a:active {
-    color: skyblue;
+    color: steelblue;
 }
 
 .main {
@@ -198,6 +198,11 @@ a:active {
 
 .mission:hover {
     filter: drop-shadow(10px 5px 5px skyblue);
+    cursor: pointer;
+}
+
+.mission:active {
+    filter: drop-shadow(10px 5px 5px steelblue);
 }
 
 /*
